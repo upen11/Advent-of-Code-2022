@@ -11,11 +11,11 @@ public class Day03 extends AOCBaseCode {
 	@Override
 	void solve(List<String> input) {
 
-		// part 1
 		part1(input);
 		part2(input);
 	}
 
+//	Part 1: 7674, Duration: 637µs
 	private void part1(List<String> input) {
 		int[] arr;
 
@@ -37,6 +37,8 @@ public class Day03 extends AOCBaseCode {
 		lap(sum);
 	}
 
+//	Part 2: 2805, Duration: 17.403ms
+//	Part 2: 2805, Duration: 7.144ms using break in z for loop if(s1.charAt(x) != s2.charAt(y)) 
 	private void part2(List<String> input) {
 		
 		int sum = 0;
@@ -49,7 +51,7 @@ public class Day03 extends AOCBaseCode {
 			for(int x=0; x<s1.length(); x++) {
 				for(int y=0; y<s2.length(); y++) {
 					for(int z=0; z<s3.length(); z++) {
-						
+						if(s1.charAt(x) != s2.charAt(y)) break;
 						if((s3.charAt(z) == s2.charAt(y)) && (s3.charAt(z) == s1.charAt(x)) ) {
 							value = alphaValue(s1.charAt(x));
 							break;
