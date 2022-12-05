@@ -17,18 +17,18 @@ public class Day01 extends AOCBaseCode {
 		
 		int sum = 0;
 		int max = 0;
-		int elfNum = 0;
-		int ans = 0;
+//		int elfNum = 0;
+//		int ans = 0;
 		for(String i : input) {
 			if(!i.trim().equals("")) {
 				sum += Integer.parseInt(i);
 			}
 			else {
 				calories.add(sum);
-				elfNum++;
+//				elfNum++;
 				if(sum > max) {
 					max = sum;
-					ans = elfNum;
+//					ans = elfNum;
 				}
 				sum = 0;
 			}
